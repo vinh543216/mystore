@@ -1,0 +1,41 @@
+.navbar {
+  border-radius: 0;
+}
+
+.navbar-inverse {
+  background-color: rgba(147, 31, 31, 1);
+  border: 0;
+  .navbar-nav li a {
+    color: #fff;
+  }
+}
+
+.top-nav {
+  background: #cccccc;
+  border: 1px silver;
+  margin: -1% 0px 1px;
+  height: 20px;
+  #block-shop-new-list-cart {
+    float: right;
+  }
+  ul {
+    list-style: none;
+    text-align: right;
+    padding-right: 5px;
+    float: right;
+    li {
+      float: right
+    }
+    li a {
+      text-decoration: none;
+    }
+  }
+  ul.links {
+    float: right;
+    li {
+      float: right;
+      margin-right:5px;
+    }
+  }
+}
+

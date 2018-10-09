@@ -1,0 +1,10 @@
+<div class="list-product">
+  {% for value in data %}
+    <div class="col-sm-3 text-center product-marigin-bootom">
+      <div><img src="{{ value.imagePath }}" width="100%" height="300px"></div>
+      <div><a href="{{ value.url }}.html">{{ value.title }}</a></div>
+      <div class="col-sm-6"><span class="price">{{ value.price }} VND</span></div>
+      <div class="col-sm-6"><a href="#" class="button">Buy Now</a></div>
+    </div>
+  {% endfor %}
+</div>

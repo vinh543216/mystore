@@ -1,0 +1,9 @@
+<div class="shopnew">
+  <h4>{{ title }}</h4>
+  <ul>
+    <h2 class="alert-danger">Category</h2>
+    {% for article in data %}
+      <li>{{ article.title }}</li>
+    {% endfor %}
+  </ul>
+</div>

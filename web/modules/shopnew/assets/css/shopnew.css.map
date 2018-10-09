@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,gBAAG;EACD,UAAU,EAAE,IAAI;EAChB,oBAAI;IACF,KAAK,EAAE,GAAG;;AAIhB,MAAO;EACL,KAAK,EAAE,GAAG;;AAGZ,uBAAwB;EACtB,aAAa,EAAE,EAAE;EACjB,MAAM,EAAE,KAAK;EACb,QAAQ,EAAE,MAAM",
+"sources": ["shopnew.scss"],
+"names": [],
+"file": "shopnew.css"
+}

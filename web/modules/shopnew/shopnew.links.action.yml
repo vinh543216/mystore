@@ -1,0 +1,11 @@
+shopnew.link_add:
+  route_name: shopnew.admin_category_add
+  title: 'Add link Shopnew'
+  appears_on:
+  - menu_ui.menu_edit
+
+shopnew.menu_add:
+  route_name: shopnew.admin_setting
+  title: 'Add menu Shopnew'
+  appears_on:
+  - menu_ui.overview_page

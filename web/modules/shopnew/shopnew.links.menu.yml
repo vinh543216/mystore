@@ -1,0 +1,7 @@
+shopnew.admin:
+  title: 'ShopNew'
+  description: 'example of how to make an admin settings page link'
+  #  parent: system.admin_structure
+  parent: system.admin
+  route_name: shopnew.admin_setting
+  weight: 100

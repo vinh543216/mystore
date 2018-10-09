@@ -1,0 +1,155 @@
+#BackEnd
+shopnew.admin_setting:
+  path: '/admin/structure/developer/shopnew/setting'
+  defaults:
+    _controller: '\Drupal\shopnew\Controller\ShopnewController::setting'
+    _title: 'Shopnew settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+##==========Category==========
+shopnew.admin_category:
+  path: '/admin/config/developer/shopnew/category'
+  defaults:
+    _form: '\Drupal\shopnew\Form\category\AddForm'
+    _title: 'shopnew categroy'
+  requirements:
+    _permission: 'administer site configuration'
+
+shopnew.admin_category_list:
+  path: '/admin/shop-new/category/list'
+  defaults:
+    #    _controller: '\Drupal\shopnew\Controller\CategoryController::categoryList'
+    _form: '\Drupal\shopnew\Form\category\ListForm'
+    _title: 'Category List'
+  requirements:
+    _permission: 'administer site configuration'
+
+shopnew.admin_category_add:
+  path: '/admin/shop-new/category/add'
+  defaults:
+    _form: '\Drupal\shopnew\Form\category\AddForm'
+    _title: 'Category Add'
+  requirements:
+    _permission: 'administer site configuration'
+
+shopnew.admin_category_edit:
+  path: '/admin/shop-new/category/edit'
+  defaults:
+    _form: '\Drupal\shopnew\Form\category\EditForm'
+    _title: 'Category edit'
+  requirements:
+    _permission: 'administer site configuration'
+
+shopnew.admin_category_delete:
+  path: '/admin/shop-new/category/delete/{cid}'
+  defaults:
+    _form: '\Drupal\shopnew\Form\category\DeleteForm'
+    _title: 'Shopnew settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+##==========Product==========
+shopnew.admin_product_list:
+  path: '/admin/shop-new/product/list'
+  defaults:
+    _form: '\Drupal\shopnew\Form\product\ListForm'
+    _title: 'product List'
+  requirements:
+    _permission: 'administer site configuration'
+shopnew.admin_product_add:
+  path: '/admin/shop-new/product/add'
+  defaults:
+    _form: '\Drupal\shopnew\Form\product\AddForm'
+    _title: 'product Add'
+  requirements:
+    _permission: 'administer site configuration'
+shopnew.admin_product_edit:
+  path: '/admin/shop-new/product/edit'
+  defaults:
+    _form: '\Drupal\shopnew\Form\product\EditForm'
+    _title: 'product edit'
+  requirements:
+    _permission: 'administer site configuration'
+
+shopnew.admin_product_delete:
+  path: '/admin/shop-new/product/delete/{cid}'
+  defaults:
+    _form: '\Drupal\shopnew\Form\product\DeleteForm'
+    _title: 'Delete Form'
+  requirements:
+    _permission: 'administer site configuration'
+##==========Front-end==========
+shopnew.index:
+  path: '/shop-new'
+  defaults:
+    _controller: '\Drupal\shopnew\Controller\ShopnewController::index'
+    _title: 'index'
+  requirements:
+    _access: 'TRUE'
+
+shopnew.detail:
+  path: '/shop-new/detail/{id}/{slug}'
+  defaults:
+    _controller: '\Drupal\shopnew\Controller\ProductController::detail'
+    _title: 'Detail product'
+  requirements:
+    _access: 'TRUE'
+##=========Add cart=============
+shopnew.add_to_cart:
+  path: '/shop-new/cart'
+  defaults:
+    _controller: '\Drupal\shopnew\Controller\CartController::addToCart'
+    #    _form: '\Drupal\shopnew\Form\Cart\ListForm'
+    _title: 'Add Cart'
+  requirements:
+    _access: 'TRUE'
+
+shopnew.delete_cart:
+  path: '/shop-new/cart/delete/{id}'
+  defaults:
+    _controller: '\Drupal\shopnew\Controller\CartController::delete'
+    _title: 'Delete Cart'
+  requirements:
+    _access: 'TRUE'
+
+shopnew.update_cart:
+  path: '/shop-new/cart/update/{rowId}/{qty}'
+  defaults:
+    _controller: '\Drupal\shopnew\Controller\CartController::update'
+    _title: 'Update Cart'
+  requirements:
+    _access: 'TRUE'
+
+##=========front page=============
+shopnew.home:
+  path: '/home'
+  defaults:
+    _controller: '\Drupal\shopnew\Controller\ShopnewController::home'
+    _title: 'Home'
+  requirements:
+    _access: 'TRUE'
+
+shopnew.category:
+  path: '/category/{slug}'
+  defaults:
+    _controller: '\Drupal\shopnew\Controller\ProductController::ListProductByCategory'
+    _title: 'Home'
+  requirements:
+    _access: 'TRUE'
+
+shopnew.category_child:
+  path: '/category/{parent}/{child}'
+  defaults:
+    _controller: '\Drupal\shopnew\Controller\ProductController::ListProductByCategory'
+    _title: 'Home'
+  requirements:
+    _access: 'TRUE'
+
+shopnew.order:
+  path: '/shop-new/order'
+  defaults:
+    _form: '\Drupal\shopnew\Form\order\OrderForm'
+    _title: 'order'
+  requirements:
+    _access: 'TRUE'

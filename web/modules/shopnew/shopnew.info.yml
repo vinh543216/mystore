@@ -1,0 +1,13 @@
+type: module
+name: shopnew
+description: 'shop developer created'
+package: Developer
+# core: 8.x
+configure: shopnew.admin_setting
+tags:
+- developer
+# Information added by Drupal.org packaging script on 2017-10-05
+version: '8.x-1.0'
+core: '8.x'
+project: 'shopnew'
+

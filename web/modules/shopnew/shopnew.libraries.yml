@@ -1,0 +1,8 @@
+shopnew_assets:
+  version: 1
+  css:
+    theme:
+      assets/css/shopnew.css: {}
+  js:
+    assets/js/shopnew.js: {}
+

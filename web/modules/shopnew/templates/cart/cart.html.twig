@@ -1,0 +1,49 @@
+<h3>List cart</h3>
+<div>
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Quality</th>
+      <th>Price</th>
+      <th></th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {% if(data.message) %}
+      <div class="alert alert-danger alert-dismissable">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        {% trans %}
+        {{ data.message }}
+        {% endtrans %}
+      </div>
+    {% endif %}
+    {% if(data['product']) %}
+      {% for value in data['product'] %}
+        <tr>
+          <td>{{ value['title'] }}</td>
+          <td><input class="qty" value="{{ value['quality'] }}"></td>
+          <td>{{ value['price'] }}</td>
+          <td><a href="#" id="{{ value.id }}" class="updateCart"> <span class="glyphicon glyphicon-refresh"></span>
+              <Refresh></Refresh>
+            </a></td>
+          <td><a href="#" id="{{ value.id }}" class="deleteCart"> <span class="glyphicon glyphicon-remove"></span>
+              Remove </a></td>
+        </tr>
+      {% endfor %}
+      <tr>
+        <td></td>
+        <td>Total:</td>
+        <td>{{ data['total'] }}</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <div><a href="{{ url('shopnew.order') }}" class="btn btn-success">Check Out</a></div>
+    {% else %}
+      <div class="alert alert-danger">{{  'No product exits in your cart' |trans }}</div>
+    {% endif %}
+    </tbody>
+  </table>
+</div>
+

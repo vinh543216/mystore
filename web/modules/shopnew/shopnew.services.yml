@@ -1,0 +1,5 @@
+services:
+  sv.shopnew.category.model:
+    class: Drupal\shopnew\Model\CategoryModel
+  sv.shopnew.product.model:
+    class: Drupal\shopnew\Model\ProductModel

@@ -1,0 +1,14 @@
+.list-product ul {
+  list-style: none; }
+  .list-product ul img {
+    width: 20%; }
+
+.price {
+  color: red; }
+
+.product-marigin-bootom {
+  margin-bottom: 1%;
+  height: 360px;
+  overflow: hidden; }
+
+/*# sourceMappingURL=shopnew.css.map */

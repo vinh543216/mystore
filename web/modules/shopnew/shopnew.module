@@ -1,0 +1,65 @@
+<?php
+
+
+function shopnew_theme()
+{
+  return [
+    'shopnew'             => [
+      'template'  => 'shopnew' ,
+      'variables' => [
+        'data' => [] ,
+      ] ,
+    ] ,
+    'shop_new_setting'    => [
+      'template'  => 'setting' ,
+      'variables' => [
+        'data' => []
+      ]
+    ] ,
+    //    block
+    'block_shop_new_list' => [
+      'template'  => '/block/product/list' ,
+      'variables' => [
+        'data' => []
+      ]
+    ] ,
+    'block_list_cart'     => [
+      'template'  => '/block/cart/list' ,
+      'variables' => [
+        'data' => []
+      ]
+    ] ,
+
+    'product_detail'        => [
+      'template'  => '/product/detail' ,
+      'variables' => [
+        'data' => []
+      ]
+    ] ,
+    'add_to_cart'           => [
+      'template'  => '/cart/cart' ,
+      'variables' => [
+        'data' => []
+      ]
+    ] ,
+    'list_product_category' => [
+      'template'  => '/block/product/list_product_category' ,
+      'variables' => [
+        'data' => []
+      ]
+    ] ,
+
+  ];
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function shopnew_form_alter(&$form , \Drupal\Core\Form\FormStateInterface $form_state , $form_id)
+{
+  switch ($form_id) {
+    case 'shopnew_category_form':
+      $form['actions']['submit']['#value'] = 'Apply';
+      break;
+  }
+}

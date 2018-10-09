@@ -1,0 +1,42 @@
+<div class="detail">
+  {% if(data) %}
+    <div class="col-sm-12 product">
+      <h3>{{ data.title}} </h3>
+      <div>
+        <div class="col-sm-4 image">
+          <div><img src="{{ data.imagePath }}" width="100%"></div>
+          <div>
+            {% if(data.images) %}
+              {% for value in data.images %}
+                <span><img src="{{ value.imagePath }}" width="50px"></span>
+              {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+        <div class="col-sm-8 description">
+          <div>
+            {% if(data.description) %}
+              {{ data.description }}
+            {% endif %}
+          </div>
+          <div class="add-to-card">
+            {{ data.form }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 content">
+      <div>
+        {% if(data.content) %}
+          {{ data.content| raw }}
+        {% endif %}
+      </div>
+    </div>
+  {% else %}
+    <div class="alert alert-danger alert-dismissible">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <strong>Info!</strong>Sản phẩm không tìm thấy
+    </div>
+  {% endif %}
+</div>
+
